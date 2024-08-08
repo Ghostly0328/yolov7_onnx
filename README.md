@@ -33,6 +33,7 @@ docker run -it -v your_code_path/:/base yolov7_onnx bash
 ```
 
 ## Inference
+Running the script will generate two annotated output images and display the inference time on the CPU.
 ```bash
 python inference.py
 ```
