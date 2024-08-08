@@ -54,7 +54,7 @@ def decode_predictions(predictions, conf_threshold=0.5, iou_threshold=0.4):
     final_class_ids = []
 
     for i in indices:
-        i = i[0]
+        #i = i[0]
         final_boxes.append(boxes[i])
         final_scores.append(scores[i])
         final_class_ids.append(class_ids[i])
