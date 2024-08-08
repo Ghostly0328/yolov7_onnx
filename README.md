@@ -10,15 +10,23 @@ This project implements an object detection system using ONNX Runtime with a YOL
 
 ## Installation Requirements
 
-1. Download the [weights](https://drive.google.com/file/d/1EMm-pDLzujFfwFt2Bgj2t7WmgzxF2-wj/view?usp=sharing) and place them in the `./weights/` directory.
+1. Clone the repository:
 
-2. Build the Docker image:
+```bash
+git clone https://github.com/Ghostly0328/yolov7_onnx.git
+cd yolov7_onnx
+mkdir weights
+```
+
+2. Download the [weights](https://drive.google.com/file/d/1EMm-pDLzujFfwFt2Bgj2t7WmgzxF2-wj/view?usp=sharing) and place them in the `./weights/` directory.
+
+3. Build the Docker image:
 
 ```bash
 docker build -t yolov7_onnx .
 ```
 
-3. Run the Docker container:
+4. Run the Docker container:
 
 ```bash
 docker run -it -v your_code_path/:/base yolov7_onnx bash
