@@ -105,14 +105,13 @@ def process(img_path, out_path):
     t1 = time.time()
     input_name = session.get_inputs()[0].name
     output_name = session.get_outputs()[0].name
-    outputs = session.run([output_name], {input_name: input_tensor})
+    predictions = session.run([output_name], {input_name: input_tensor})
 
     t2 = time.time()
     time_taken = t2 - t1
     print(f"CPU cost time {time_taken:.4f}")
     
     # 解碼和 NMS
-    predictions = outputs  # 假設輸出形狀為 (1, 1, 25200, 85)
     boxes, scores, class_ids = decode_predictions(predictions)
 
     # 繪製邊界框
@@ -151,7 +150,6 @@ if __name__ == "__main__":
     providers = ['CUDAExecutionProvider', 'CPUExecutionProvider'] if cuda else ['CPUExecutionProvider']
     session = ort.InferenceSession(model_path, providers=providers)
     
+    ## 使用示例圖像進行測試
     process('./inference/img/bus.jpg', 'output_bus.jpg')
     process('./inference/img/horses.jpg', 'output_horses.jpg')
-
-    
