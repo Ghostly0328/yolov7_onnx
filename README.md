@@ -54,7 +54,5 @@ Detection result saved to output_horses.jpg
 
 ## DEMO Video
 
-<video width="1280" height="448" controls>
-  <source src="inference/video/Demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the Demo video](https://youtu.be/zynkqfNjtjs)
+
