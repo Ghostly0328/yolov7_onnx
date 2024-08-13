@@ -33,7 +33,21 @@ docker run -it -v your_code_path/:/base yolov7_onnx bash
 ```
 
 ## Inference
+
 Running the script will generate two annotated output images and display the inference time on the CPU.
 ```bash
 python inference.py
 ```
+
+## Result
+
+```bash
+CPU cost time 0.3624
+Detection result saved to output_bus.jpg
+CPU cost time 0.3358
+Detection result saved to output_horses.jpg
+```
+
+<img src="inference/result/output_bus.jpg" alt="示例圖片" width="512" />
+
+<img src="inference/result/output_horses.jpg" alt="示例圖片" width="512" />
