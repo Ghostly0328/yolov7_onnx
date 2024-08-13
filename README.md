@@ -51,3 +51,10 @@ Detection result saved to output_horses.jpg
 <img src="inference/result/output_bus.jpg" alt="示例圖片" width="512" />
 
 <img src="inference/result/output_horses.jpg" alt="示例圖片" width="512" />
+
+## DEMO Video
+
+<video width="1280" height="448" controls>
+  <source src="inference/video/Demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
